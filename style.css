@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ font-family: sans-serif;
+}
+.containr{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(#0000009a,#000000ad),
+    url(sddefault.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    
+}
+header{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 2rem 0;
+}
+.logo{
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #00ffff;
+    margin: auto;
+    transition: all ease 0.55s;
+}
+ul li:hover::after{
+    width: 100%;
+}
+ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight:bold;
+    padding: 0 25px;
+
+}
+.text{
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}  
+.text h1{
+    font-size: 60px;
+    color: #fff;
+    margin: 20px auto;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.text p{
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin: 20px auto ;
+
+}
+ .text button{
+    width: 200px;
+    background-color: transparent;
+   padding: 15px 0;
+   border-radius: 30px;
+   position: relative;
+   border: 3px solid #00ffff;
+   text-align: center;
+   font-weight: bold;
+   text-transform: capitalize;
+   color: #fff;
+   overflow: hidden;
+   cursor: pointer;
+   margin: 20px 10px;
+}
+.text span{
+    background-color: rgb(31, 133, 133);
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 30px;
+    z-index: -1;
+    color: #ffffff28;
+    transition: 0.5s;
+}
+.text button:hover span{
+    width: 100%;
+}
+.text button:hover{
+    border: none;
+}
+  
+
+
+
+
+
+  
+@media  (max-width:815px) {
+  header{  
+    flex-direction: column;
+    justify-content: center;
+  }
+  ul li a{
+    padding: 0 10px;
+  }
+}
+@media  (max-width:485px) {
+    ul li a{
+        font-size:10px ; 
+}
+.text h1{
+    font-size: 30px;
+}
+.logo{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+}
